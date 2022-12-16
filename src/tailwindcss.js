@@ -1,8 +1,16 @@
 tailwind.config = {
     theme: {
+        container: {
+            center: true,
+          },
       extend: {
         colors: {
-          clifford: '#da373d',
+          clifford: '#FF6347',
+          lightskin: '#F8F3EE',
+
+        },
+        height : {
+            '84':'84px'
         }
       }
     }

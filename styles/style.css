@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.link {
+    position: relative;
+    transition: color 300ms;
+    flex: 1;
+    height: 100%;
+    padding: 24px;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 300ms;
+}
+
+.link:hover {
+    font-weight: bold;
+}
+
+.link:hover::before {
+    transform: scaleX(1);
+}
+
+.home::before{
+    background: #FF6347;
+}
+
+.about::before{
+    background: rgb(95, 174, 103);
+}
+
+.login::before{
+    background: #f8da3d;
+}
+
+.signup::before{
+    background: #bb60ff;
+}
+
