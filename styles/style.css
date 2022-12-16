@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Regular.otf');
+}
+
+@font-face {
+    font-family: 'ClashDisplayMedium';
+    src: url('../fonts/ClashDisplay-Medium.otf');
+}
+
+
+
+.clash {
+    font-family: 'ClashDisplay', Fallback, sans-serif;
+}
+.clash-medium {
+    font-family: 'ClashDisplayMedium', Fallback, sans-serif;
 }
 
 .link {
@@ -46,3 +66,59 @@
     background: #bb60ff;
 }
 
+.divider {
+    background: #000000;
+    flex: none;
+    height: 2px;
+    margin: 40px 0px 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ 
+
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    border-bottom: solid 2px #000
+  }
+
+  .service-item {
+    border-top: solid 2px #000;
+    
+    padding: 1rem;
+    position: relative;
+    border-right: solid 2px #000;
+  }
+  
+  .service-item:nth-child(3n+1) {
+    border-left: none;
+  }
+
+  .service-item:nth-child(3n+0) {
+    border-right: none;
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+  }
+  
+  .tag::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #000000;
+  }
