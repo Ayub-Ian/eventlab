@@ -15,7 +15,7 @@
       <!-- header  -->
       <header class="sticky border-b-2 border-black h-84">
         <ul
-          class="flex justify-around uppercase  list-none items-center text-2xl h-full divide-x-2 divide-black mx-auto pl-8"
+          class="flex justify-around uppercase list-none items-center text-2xl h-full divide-x-2 divide-black mx-auto pl-8"
         >
           <li class="flex h-full hover:opacity-70 flex-1">
             <a class="self-center" href="#">
@@ -36,7 +36,7 @@
           <li class="link home"><a href="#">home</a></li>
           <li class="link about"><a href="#about">about</a></li>
           <li id="loginBtn" class="link login"><a href="#">login</a></li>
-          <li class="link signup"><a href="#">sign up</a></li>
+          <li id="signUpBtn"  class="link signup"><a href="#">sign up</a></li>
         </ul>
       </header>
 
@@ -117,228 +117,375 @@
           upcoming events
         </p>
         <div class="mt-12">
-            <div class="service-grid">
-                <div class="service-item">
-                  <div class="flex flex-col">
-                    <div class="w-80 h-60 self-center">
-                      <img
-                        class="object-cover h-full"
-                        src="./images/Rectangle 2.png"
-                        alt=""
-                      />
-                    </div>
-      
-                    <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
-                      >Concert</span
-                    >
-      
-                    <div class="ml-12">
-                      <h1 class="text-lg font-semibold">Gondwana festival</h1>
-                      <p>Ngong racecourse</p>
-                      <p>10:00 PM</p>
-                      <p>Price : <span>1500</span></p>
-                    </div>
-                    <button class="bg-clifford w-fit rounded-full absolute bottom-6 right-16 "><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z" fill="black"/>
-                      </svg>
-                      </button>
-                 
-                    <p class=" absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2">12 / <br> Sept</p>
-                  
-                  </div>
-                  
+          <div class="service-grid">
+            <div class="service-item">
+              <div class="flex flex-col">
+                <div class="w-80 h-60 self-center">
+                  <img
+                    class="object-cover h-full"
+                    src="./images/Rectangle 2.png"
+                    alt=""
+                  />
                 </div>
-                <div class="service-item">
-                  <div class="flex flex-col">
-                    <div class="w-80 h-60 self-center">
-                      <img
-                        class="object-cover h-full"
-                        src="./images/Rectangle 2.png"
-                        alt=""
-                      />
-                    </div>
-      
-                    <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
-                      >Concert</span
-                    >
-      
-                    <div class="ml-12">
-                      <h1 class="text-lg font-semibold">Gondwana festival</h1>
-                      <p>Ngong racecourse</p>
-                      <p>10:00 PM</p>
-                      <p>Price : <span>1500</span></p>
-                    </div>
-                    <button class="bg-clifford w-fit rounded-full absolute bottom-6 right-16 "><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z" fill="black"/>
-                      </svg>
-                      </button>
-                 
-                    <p class=" absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2">12 / <br> Sept</p>
-                  
-                  </div>
-                  
+
+                <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
+                  >Concert</span
+                >
+
+                <div class="ml-12">
+                  <h1 class="text-lg font-semibold">Gondwana festival</h1>
+                  <p>Ngong racecourse</p>
+                  <p>10:00 PM</p>
+                  <p>Price : <span>1500</span></p>
                 </div>
-                <div class="service-item">
-                  <div class="flex flex-col">
-                    <div class="w-80 h-60 self-center">
-                      <img
-                        class="object-cover h-full"
-                        src="./images/Rectangle 2.png"
-                        alt=""
-                      />
-                    </div>
-      
-                    <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
-                      >Concert</span
-                    >
-      
-                    <div class="ml-12">
-                      <h1 class="text-lg font-semibold">Gondwana festival</h1>
-                      <p>Ngong racecourse</p>
-                      <p>10:00 PM</p>
-                      <p>Price : <span>1500</span></p>
-                    </div>
-                    <button class="bg-clifford w-fit rounded-full absolute bottom-6 right-16 "><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z" fill="black"/>
-                      </svg>
-                      </button>
-                 
-                    <p class=" absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2">12 / <br> Sept</p>
-                  
-                  </div>
-                  
-                </div>
-                <div class="service-item">
-                  <div class="flex flex-col">
-                    <div class="w-80 h-60 self-center">
-                      <img
-                        class="object-cover h-full"
-                        src="./images/Rectangle 2.png"
-                        alt=""
-                      />
-                    </div>
-      
-                    <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
-                      >Concert</span
-                    >
-      
-                    <div class="ml-12">
-                      <h1 class="text-lg font-semibold">Gondwana festival</h1>
-                      <p>Ngong racecourse</p>
-                      <p>10:00 PM</p>
-                      <p>Price : <span>1500</span></p>
-                    </div>
-                    <button class="bg-clifford w-fit rounded-full absolute bottom-6 right-16 "><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z" fill="black"/>
-                      </svg>
-                      </button>
-                 
-                    <p class=" absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2">12 / <br> Sept</p>
-                  
-                  </div>
-                  
-                </div>
-                <div class="service-item">
-                  <div class="flex flex-col">
-                    <div class="w-80 h-60 self-center">
-                      <img
-                        class="object-cover h-full"
-                        src="./images/Rectangle 2.png"
-                        alt=""
-                      />
-                    </div>
-      
-                    <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
-                      >Concert</span
-                    >
-      
-                    <div class="ml-12">
-                      <h1 class="text-lg font-semibold">Gondwana festival</h1>
-                      <p>Ngong racecourse</p>
-                      <p>10:00 PM</p>
-                      <p>Price : <span>1500</span></p>
-                    </div>
-                    <button class="bg-clifford w-fit rounded-full absolute bottom-6 right-16 "><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z" fill="black"/>
-                      </svg>
-                      </button>
-                 
-                    <p class=" absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2">12 / <br> Sept</p>
-                  
-                  </div>
-                  
-                </div>
-                <div class="service-item">
-                  <div class="flex flex-col">
-                    <div class="w-80 h-60 self-center">
-                      <img
-                        class="object-cover h-full"
-                        src="./images/Rectangle 2.png"
-                        alt=""
-                      />
-                    </div>
-      
-                    <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
-                      >Concert</span
-                    >
-      
-                    <div class="ml-12">
-                      <h1 class="text-lg font-semibold">Gondwana festival</h1>
-                      <p>Ngong racecourse</p>
-                      <p>10:00 PM</p>
-                      <p>Price : <span>1500</span></p>
-                    </div>
-                    <button class="bg-clifford w-fit rounded-full absolute bottom-6 right-16 "><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z" fill="black"/>
-                      </svg>
-                      </button>
-                 
-                    <p class=" absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2">12 / <br> Sept</p>
-                  
-                  </div>
-                  
-                </div> 
+                <button
+                  class="bg-clifford w-fit rounded-full absolute bottom-6 right-16"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+
+                <p
+                  class="absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2"
+                >
+                  12 / <br />
+                  Sept
+                </p>
               </div>
+            </div>
+            <div class="service-item">
+              <div class="flex flex-col">
+                <div class="w-80 h-60 self-center">
+                  <img
+                    class="object-cover h-full"
+                    src="./images/Rectangle 2.png"
+                    alt=""
+                  />
+                </div>
+
+                <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
+                  >Concert</span
+                >
+
+                <div class="ml-12">
+                  <h1 class="text-lg font-semibold">Gondwana festival</h1>
+                  <p>Ngong racecourse</p>
+                  <p>10:00 PM</p>
+                  <p>Price : <span>1500</span></p>
+                </div>
+                <button
+                  class="bg-clifford w-fit rounded-full absolute bottom-6 right-16"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+
+                <p
+                  class="absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2"
+                >
+                  12 / <br />
+                  Sept
+                </p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="flex flex-col">
+                <div class="w-80 h-60 self-center">
+                  <img
+                    class="object-cover h-full"
+                    src="./images/Rectangle 2.png"
+                    alt=""
+                  />
+                </div>
+
+                <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
+                  >Concert</span
+                >
+
+                <div class="ml-12">
+                  <h1 class="text-lg font-semibold">Gondwana festival</h1>
+                  <p>Ngong racecourse</p>
+                  <p>10:00 PM</p>
+                  <p>Price : <span>1500</span></p>
+                </div>
+                <button
+                  class="bg-clifford w-fit rounded-full absolute bottom-6 right-16"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+
+                <p
+                  class="absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2"
+                >
+                  12 / <br />
+                  Sept
+                </p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="flex flex-col">
+                <div class="w-80 h-60 self-center">
+                  <img
+                    class="object-cover h-full"
+                    src="./images/Rectangle 2.png"
+                    alt=""
+                  />
+                </div>
+
+                <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
+                  >Concert</span
+                >
+
+                <div class="ml-12">
+                  <h1 class="text-lg font-semibold">Gondwana festival</h1>
+                  <p>Ngong racecourse</p>
+                  <p>10:00 PM</p>
+                  <p>Price : <span>1500</span></p>
+                </div>
+                <button
+                  class="bg-clifford w-fit rounded-full absolute bottom-6 right-16"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+
+                <p
+                  class="absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2"
+                >
+                  12 / <br />
+                  Sept
+                </p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="flex flex-col">
+                <div class="w-80 h-60 self-center">
+                  <img
+                    class="object-cover h-full"
+                    src="./images/Rectangle 2.png"
+                    alt=""
+                  />
+                </div>
+
+                <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
+                  >Concert</span
+                >
+
+                <div class="ml-12">
+                  <h1 class="text-lg font-semibold">Gondwana festival</h1>
+                  <p>Ngong racecourse</p>
+                  <p>10:00 PM</p>
+                  <p>Price : <span>1500</span></p>
+                </div>
+                <button
+                  class="bg-clifford w-fit rounded-full absolute bottom-6 right-16"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+
+                <p
+                  class="absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2"
+                >
+                  12 / <br />
+                  Sept
+                </p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="flex flex-col">
+                <div class="w-80 h-60 self-center">
+                  <img
+                    class="object-cover h-full"
+                    src="./images/Rectangle 2.png"
+                    alt=""
+                  />
+                </div>
+
+                <span class="ml-12 my-1 bg-[#5fae67] w-fit px-2 py-1 tag"
+                  >Concert</span
+                >
+
+                <div class="ml-12">
+                  <h1 class="text-lg font-semibold">Gondwana festival</h1>
+                  <p>Ngong racecourse</p>
+                  <p>10:00 PM</p>
+                  <p>Price : <span>1500</span></p>
+                </div>
+                <button
+                  class="bg-clifford w-fit rounded-full absolute bottom-6 right-16"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.4645 29.0709L18.5087 26.5519H24.7842L14.0451 15.8127L15.8128 14.0449L26.552 24.7841L26.552 18.5085L29.0711 18.4643V29.0709H18.4645Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+
+                <p
+                  class="absolute bg-black text-white font-semibold text-center w-20 h-20 p-3 rounded-full top-2"
+                >
+                  12 / <br />
+                  Sept
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        
       </div>
 
       <!-- footer  -->
       <div class="text-center bg-black text-white py-3">
         <p>Project contributed by Ian Ayub © 2022</p>
       </div>
-
-      <!-- The Modal -->
-<div id="loginModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      
-     
-        <img src="./images/Log in 1.png" alt="" class=" w-60">
-        
-     
-    <div class="flex-1">
-      <span class="close">&times;</span>
-      <p class="clash-medium uppercase my-2">welcome to eventlab</p>
-      <form action="" class="flex flex-col">
-      <label for="username" class="clash-medium uppercase">username</label>
-      <input type="text" placeholder="Enter username" class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2">
-      <label for="username" class="clash-medium uppercase">password</label>
-      <input type="text" placeholder="Enter username" class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2">
-      <input type="submit" value="Enter" class="border border-black w-fit self-center py-4 px-8 mt-2 btn">
-     </form>
     </div>
-      
-     </div>
-</div>
-    
-  
-    
-      
-    
-  
-  
+
+    <!-- The Login Modal -->
+    <div id="loginModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <img src="./images/Log in 1.png" alt="" class="w-60" />
+
+        <div class="flex-1">
+          <span class="close">&times;</span>
+          <p class="clash-medium uppercase my-2">welcome to eventlab</p>
+          <form action="" class="flex flex-col">
+            <label for="username" class="clash-medium uppercase"
+              >username</label
+            >
+            <input
+              type="text"
+              placeholder="Enter username"
+              class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
+            />
+            <label for="username" class="clash-medium uppercase"
+              >password</label
+            >
+            <input
+              type="text"
+              placeholder="Enter username"
+              class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
+            />
+            <input
+              type="submit"
+              value="Enter"
+              class="border border-black w-fit self-center py-4 px-8 mt-2 btn"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+     <!-- The Login Modal -->
+    <div id="signUpModal" class="">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <img src="./images/Welcome 1.png" alt="" class="w-80" />
+
+        <div class="flex-1">
+          <span class="close">&times;</span>
+          <p class="clash-medium uppercase my-2">join eventlab</p>
+          <form action="" class="flex flex-col">
+            <label for="username" class="clash-medium uppercase"
+              >username</label
+            >
+            <input
+              type="text"
+              placeholder="Enter username"
+              class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
+            />
+            <label for="username" class="clash-medium uppercase"
+            >email</label
+          >
+          <input
+            type="text"
+            placeholder="Enter email"
+            class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
+          />
+            <label for="username" class="clash-medium uppercase"
+              >password</label
+            >
+            <input
+              type="text"
+              placeholder="Enter password"
+              class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
+            />
+            <label for="username" class="clash-medium uppercase"
+            > confirm password</label
+          >
+          <input
+            type="text"
+            placeholder="Confirm password"
+            class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
+          />
+            <input
+              type="submit"
+              value="Join"
+              class="border border-black w-fit self-center py-4 px-8 mt-2 btn"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="./src/index.js"></script>
   </body>
 </html>
