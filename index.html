@@ -35,7 +35,7 @@
           </li>
           <li class="link home"><a href="#">home</a></li>
           <li class="link about"><a href="#about">about</a></li>
-          <li class="link login"><a href="#">login</a></li>
+          <li id="myBtn" class="link login"><a href="#">login</a></li>
           <li class="link signup"><a href="#">sign up</a></li>
         </ul>
       </header>
@@ -65,7 +65,7 @@
 
       <!-- about us  -->
       <div class="px-8 mx-auto mt-12 mb-6">
-        <section id="about">
+        <section id="about" class="">
           <p
             class="clash-medium uppercase text-2xl before:bg-clifford before:p-1.5 before:mr-4"
           >
@@ -307,7 +307,38 @@
       <div class="text-center bg-black text-white py-3">
         <p>Project contributed by Ian Ayub © 2022</p>
       </div>
+
+      <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      
+     
+        <img src="./images/Log in 1.png" alt="" class=" w-60">
+        
+     
+    <div class="flex-1">
+      <span class="close">&times;</span>
+      <p class="clash-medium uppercase my-2">welcome to eventlab</p>
+      <form action="" class="flex flex-col">
+      <label for="username" class="clash-medium uppercase">username</label>
+      <input type="text" placeholder="Enter username" class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2">
+      <label for="username" class="clash-medium uppercase">password</label>
+      <input type="text" placeholder="Enter username" class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2">
+      <input type="submit" value="Enter" class="border border-black w-fit self-center py-4 px-8 mt-2 btn">
+     </form>
     </div>
+      
+     </div>
+</div>
+    
+  
+    
+      
+    
+  
+  
     <script src="./src/index.js"></script>
   </body>
 </html>
