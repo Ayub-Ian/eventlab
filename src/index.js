@@ -244,10 +244,36 @@ let dotposition=email.lastIndexOf(".");
 
 function handleSearch() {
   const searchForm = document.querySelector('#search_form')
+  const countryCodes = {
+    japan : 'jp',
+    jamaica: 'jm',
+    canada: 'ca'
+  }
   searchForm.addEventListener('submit',(e)=>{
     e.preventDefault()
-    let value = e.target.search.value
-    alert(value)
+   
+    let input = e.target.search.value.toLowerCase()
+    let searchValue;
+    for (const key in countryCodes) {
+      if (key === input) {
+        console.log(countryCodes[input])
+        searchValue = countryCodes[input]
+      }
+    }
+    console.log(searchValue)
+
+    const searchUrl = `https://app.ticketmaster.com/discovery/v2/suggest.json?countryCode=${searchValue}&apikey=CI1WE32n4l6fgGf5ErtPnGSdEZfcPZAP`
+    fetch(searchUrl)
+    .then(res=>res.json())
+    .then(data => {
+      console.log(data["_embedded"].attractions)
+      data["_embedded"].attractions.forEach(element => {
+        showResults(element)
+      });
+     
+      // console.log(data)
+    })
+    
     searchForm.reset()
   }
   )
@@ -260,4 +286,27 @@ function showTooltip() {
 function hideTooltip() {
  
   document.getElementById("tooltip3").classList.add("hidden");
+}
+
+function closeNav() {
+  document.getElementById("searchSidenav").style.width = "0";
+}
+
+function showResults(data) {
+  
+  let searchItem = document.createElement('div')
+  searchItem.classList.add("flex", "gap-4", "bg-white", "w-fit", "p-4", "my-4", "ml-8")
+  searchItem.innerHTML = `<img
+  src=${data.images[3].url}
+  alt=""
+  class="w-48 object-cover"
+/>
+<div class="flex flex-col justify-between">
+  <p class="text-lg font-medium">${data.name}</p>
+  <p class="w-fit px-2 py-1 tag">${data.classifications[0].segment.name}</p>
+  <a href=${data.url} target="_blank" class="bg-[#5fae67] w-fit p-2">View tickets</a>
+</div>`
+document.getElementById("searchSidenav").appendChild(searchItem)
+document.getElementById("searchSidenav").style.width = "60%";
+  
 }
