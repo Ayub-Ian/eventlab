@@ -13,7 +13,7 @@
   <body>
     <div class="bg-lightskin">
       <!-- header  -->
-      <header class="sticky border-b-2 border-black h-84">
+      <header class="sticky border-b-2 border-black h-84 ">
         <ul
           class="flex justify-around uppercase list-none items-center text-2xl h-full divide-x-2 divide-black mx-auto pl-8"
         >
@@ -33,7 +33,7 @@
               </svg>
             </a>
           </li>
-          <li class="link home"><a href="#">home</a></li>
+          <li class="link home"><a href="./index.html">home</a></li>
           <li class="link about"><a href="#about">about</a></li>
           <li id="loginBtn" class="link login"><a href="#">login</a></li>
           <li id="signUpBtn"  class="link signup"><a href="#">sign up</a></li>
@@ -41,6 +41,7 @@
       </header>
 
       <!-- landing page  -->
+      <div id="landing-page">
       <div class="px-8 mx-auto">
         <div class="relative my-6 w-full">
           <form class="w-1/2 center" action="#" autocomplete="off">
@@ -399,6 +400,8 @@
       </div>
     </div>
 
+  </div>
+
     <!-- The Login Modal -->
     <div id="loginModal" class="modal">
       <!-- Modal content -->
@@ -488,39 +491,39 @@
     </div>
 
     <!-- The event details section  -->
-    <div id="event-details" >
-      <div class="px-8 mx-auto">
-      <button class="my-6 border border-black py-2 px-4 btn">Go back</button>
-      <p class="clash-medium text-6xl">Memphis Grizzlies vs. Phoenix Suns</p>
-      <div class="h-519 w-full">
-      <img class="my-4 w-full" src="./images/Rectangle 2.png" alt="">
-  </div>
-  <span class="text-6xl font-semibold">Friday - <br> 
-      23 September 2023</span>
+    <div id="event-details" class="hidden bg-lightskin overflow-y-auto top-82 fixed h-full  " >
+      <div class="px-8 mx-auto py-8 ">
+      <a href="./index.html#upcoming-events" onclick="toggleDisplay()" class=" border border-black py-2 px-4 btn">Go back</a>
+      <p id="evt_title" class="clash-medium text-6xl mt-6"></p>
+      
+      <img id="evt_img" class="my-4 object-cover " src="" alt="">
+  
+  <span id="evt_date" class="text-4xl font-semibold"></span>
     </div>
     <div class="divider"></div>
     <div class="px-8 mx-auto">
       <div class="flex mt-6">
           <span class="flex-1 uppercase">
-              <p class="font-semibold">About Memphis Grizzlies vs. Phoenix Suns </p>
-              <p>description</p>
+              <p id="evt_desc_title" class="font-semibold"> </p>
+              <p >description</p>
           </span>
-          <p class="flex-1 text-2xl">The electronic music festival in a beautiful and modern version is a treat for all loving local artists. — Over 20 artists will playing songs from their latest albums. Great fun and entertainment for the whole evening. Plan and book today.</p>
+          <p id="evt_desc" class="flex-1 text-2xl"></p>
       </div>
       <div class="space-y-4 my-14">
           <span class="flex justify-around border-b-2 border-black p-2">
               <p class="font-semibold">Place</p>
-              <p class="font-semibold">ngong race course</p>
-              <p>View in map</p>
+              <p id="evt_location" class="font-semibold"></p>
+              
           </span>
           <span class="flex justify-around border-b-2 border-black p-2">
               <p class="font-semibold">Date & Price</p>
-              <p class="font-semibold" >Friday - 23 September 2023</p>
-              <a class="bg-greenlight px-6 py-3">Get tickets</a>
+              <p id="evt_dte" class="font-semibold" ></p>
+              <a id="evt_ticket" class="bg-greenlight px-6 py-3">Get tickets</a>
           </span>
 
       </div>
-      <img class="my-4" src="./images/Group 8.png" alt="">
+      <img class="mt-4 mb-32
+      " src="./images/Group 8.png" alt="">
     </div>
   </div>
     

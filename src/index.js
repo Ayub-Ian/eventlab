@@ -126,7 +126,45 @@ xmlns="http://www.w3.org/2000/svg"
 </svg>`
 item.appendChild(btn)
 
+btn.addEventListener('click',()=> {
+  const landingPage = document.querySelector("#landing-page")
+  const detailPage = document.querySelector('#event-details')
+
+  let title = document.querySelector('#evt_title')
+  let img = document.querySelector('#evt_img')
+  let date = document.querySelector('#evt_date')
+  let descTitle = document.querySelector('#evt_desc_title')
+  let desc = document.querySelector('#evt_desc')
+  let loc = document.querySelector('#evt_location')
+  let dte = document.querySelector('#evt_dte')
+  let ticketUrl = document.querySelector('#evt_ticket')
+
+  landingPage.style.display = "none"
+  detailPage.style.display = "block"
+  let dateStr = new Date(event.dates.start.localDate);
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+let convertedDate = dateStr.toLocaleDateString(undefined,options)
+
+  
+  title.textContent = event.name
+  img.src = event.images[1].url
+
+  date.textContent=convertedDate
+  descTitle.textContent = `About ${event.name}`
+  desc.textContent = `${event["_embedded"].venues[0].accessibleSeatingDetail} ${event["_embedded"].venues[0].parkingDetail}`
+  loc.textContent = event["_embedded"].venues[0].timezone
+  dte.textContent = convertedDate
+  ticketUrl.href = event["_embedded"].venues[0].url
+  ticketUrl.setAttribute('target', '_blank' )
+
+})
 
 
+}
 
+function toggleDisplay() {
+  const landingPage = document.querySelector("#landing-page")
+  const detailPage = document.querySelector('#event-details')
+  landingPage.style.display = "block"
+  detailPage.style.display = "none"
 }

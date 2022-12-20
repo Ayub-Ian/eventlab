@@ -11,6 +11,7 @@ tailwind.config = {
 
         },
         height : {
+          '82':'82px',
             '84':'84px',
             '519': '519px'
         }
