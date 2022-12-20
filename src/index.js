@@ -271,7 +271,6 @@ function handleSearch() {
         showResults(element)
       });
      
-      // console.log(data)
     })
     
     searchForm.reset()
@@ -281,7 +280,7 @@ function handleSearch() {
 
 function showTooltip() {
  
-      document.getElementById("tooltip3").classList.remove("hidden");
+ document.getElementById("tooltip3").classList.remove("hidden");
 }
 function hideTooltip() {
  
