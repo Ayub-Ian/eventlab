@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   eventSuggestions()
   handleLogin()
   handleSignUp()
+  handleSearch()
 });
 
 //Login modal pop up functionality
@@ -239,4 +240,24 @@ let dotposition=email.lastIndexOf(".");
     }
     signUpForm.reset()
   })
+}
+
+function handleSearch() {
+  const searchForm = document.querySelector('#search_form')
+  searchForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    let value = e.target.search.value
+    alert(value)
+    searchForm.reset()
+  }
+  )
+}
+
+function showTooltip() {
+ 
+      document.getElementById("tooltip3").classList.remove("hidden");
+}
+function hideTooltip() {
+ 
+  document.getElementById("tooltip3").classList.add("hidden");
 }

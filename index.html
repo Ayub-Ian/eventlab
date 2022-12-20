@@ -44,14 +44,52 @@
       <div id="landing-page">
       <div class="px-8 mx-auto">
         <div class="relative my-6 w-full">
-          <form class="w-1/2 center" action="#" autocomplete="off">
+          <form id="search_form" class="w-1/2 center flex gap-2 items-center" action="#" autocomplete="off">
             <input
-              class="w-full p-6 outline-0 placeholder:italic"
+              class="w-full p-4 outline-0 placeholder:italic"
               type="text"
-              placeholder="Search EVENTLAB"
+              name="search"
+              placeholder="Search using country...."
             />
+            <div class="flex items-center bg-black text-white italic p-2 rounded">
+            <p class="text-xs">supported countries</p>
+            <!--Code Block for gray tooltip starts-->
+          <a tabindex="0" aria-label="tooltip 3" role="link" class="focus:outline-none focus:ring-gray-300 rounded-full focus:ring-offset-2 focus:ring-2 focus:bg-gray-200 relative" onmouseover="showTooltip()" onfocus="showTooltip()" onmouseout="hideTooltip()">
+            <div class=" cursor-pointer flex ">
+              
+                <svg aria-haspopup="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                    <polyline points="11 12 12 12 12 16 13 16" />
+                </svg>
+            </div>
+            <div id="tooltip3" role="tooltip" class="z-20 -mt-20 w-64 absolute transition duration-150 ease-in-out left-0 ml-8 shadow-lg bg-gray-800 p-4 rounded hidden">
+                <svg class="absolute left-0 -ml-2 bottom-0 top-0 h-full" width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Tooltips-" transform="translate(-874.000000, -1029.000000)" fill="#2D3748">
+                            <g id="Group-3-Copy-16" transform="translate(850.000000, 975.000000)">
+                                <g id="Group-2" transform="translate(24.000000, 0.000000)">
+                                    <polygon id="Triangle" transform="translate(4.500000, 62.000000) rotate(-90.000000) translate(-4.500000, -62.000000) " points="4.5 57.5 12.5 66.5 -3.5 66.5"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <p class="text-sm font-bold text-white pb-2">Type only supported countries</p>
+                <p class="text-xs leading-4 text-white pb-1">Canada</p>
+                <p class="text-xs leading-4 text-white pb-1">Japan</p>
+                <p class="text-xs leading-4 text-white pb-1">Jamaica</p>
+                
+            </div>
+        </a>
+      </div>
+        <!--Code Block for gray tooltip ends-->
           </form>
           <img src="./images/Rectangle 2.png" alt="" />
+
+          
+
         </div>
         <div class="flex items-center">
           <p class="flex-1 text-4xl uppercase clash">
