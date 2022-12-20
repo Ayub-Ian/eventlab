@@ -411,13 +411,14 @@
         <div class="flex-1">
           <span class="close">&times;</span>
           <p class="clash-medium uppercase my-2">welcome to eventlab</p>
-          <form action="" class="flex flex-col">
+          <form id="login_form" action="" class="flex flex-col" autocomplete="off">
             <label for="username" class="clash-medium uppercase"
               >username</label
             >
             <input
               type="text"
               placeholder="Enter username"
+              name="username"
               class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
             />
             <label for="username" class="clash-medium uppercase"
@@ -426,6 +427,7 @@
             <input
               type="text"
               placeholder="Enter username"
+              name="password"
               class="bg-none border border-black p-4 outline-0 placeholder:italic placeholder:text-sm my-2"
             />
             <input

@@ -3,12 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   loginModal()
   signUpModal()
   eventSuggestions()
+  handleLogin()
 });
 
 //Login modal pop up functionality
 function loginModal() {
   // Get the login modal
   let loginModal = document.getElementById("loginModal");
+  //Get login form
+  const loginForm = document.querySelector('#login_form')
 
   // Get the button that opens the modal
   let loginBtn = document.getElementById("loginBtn");
@@ -24,6 +27,8 @@ function loginModal() {
   // When the user clicks on <span> (x), close the modal
   close.onclick = function () {
     loginModal.style.display = "none";
+    loginForm.reset()
+
   };
 
   // When the user clicks anywhere outside of the modal, close it
@@ -167,4 +172,28 @@ function toggleDisplay() {
   const detailPage = document.querySelector('#event-details')
   landingPage.style.display = "block"
   detailPage.style.display = "none"
+}
+
+function handleLogin() {
+  const loginForm = document.querySelector('#login_form')
+  loginForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    let name = e.target.username.value
+    let password = e.target.password.value
+    console.log(password)
+    if (name == null || name == ""){
+      alert("Name can't be blank")
+      e.target.username.style.outline = "1px solid #FF6347"
+      return false
+    } else if (password.length < 6) {
+      alert('Password must be at least 6 characters long')
+      e.target.password.style.outline = "1px solid #FF6347"
+      return false
+    } else {
+      alert('Successful login')
+      let loginModal = document.getElementById("loginModal");
+      loginModal.style.display = "none";
+    }
+    loginForm.reset()
+  })
 }
