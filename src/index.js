@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   signUpModal()
   eventSuggestions()
   handleLogin()
+  handleSignUp()
 });
 
 //Login modal pop up functionality
@@ -44,6 +45,9 @@ function signUpModal() {
   // Get the sign up modal
   let signUpModal = document.getElementById("signUpModal");
 
+  //Get sign up form 
+  const signUpForm = document.querySelector('#signup_form')
+
   // Get the button that opens the modal
   let signUpBtn = document.getElementById("signUpBtn");
 
@@ -58,6 +62,7 @@ function signUpModal() {
   // When the user clicks on <span> (x), close the modal
   close.onclick = function () {
     signUpModal.style.display = "none";
+    signUpForm.reset()
   };
 
   // When the user clicks anywhere outside of the modal, close it
@@ -195,5 +200,43 @@ function handleLogin() {
       loginModal.style.display = "none";
     }
     loginForm.reset()
+  })
+}
+
+function handleSignUp() {
+  const signUpForm = document.querySelector('#signup_form')
+  signUpForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let email = e.target.email.value
+    let username = e.target.username.value
+    let password = e.target.password.value
+    let confirmPass = e.target.confirmPassword.value
+    let atposition=email.indexOf("@");  
+let dotposition=email.lastIndexOf(".");
+
+
+
+    if (username == null || username == ""){
+      alert("Username can't be blank")
+      e.target.username.style.outline = "1px solid #FF6347"
+      return false
+    } else if(atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length) {
+      alert("Please enter a valid e-mail address")
+      e.target.email.style.outline = "1px solid #FF6347"
+      return false
+    } else if (password.length < 6) {
+      alert('Password must be at least 6 characters long')
+      e.target.password.style.outline = "1px solid #FF6347"
+      return false 
+    } else if (password !== confirmPass) {
+      alert('Passwords do not match')
+      e.target.confirmPassword.style.outline = "1px solid #FF6347"
+      return false 
+    } else {
+      alert('Successfully registered')
+      let signUpModal = document.getElementById("signUpModal");
+      signUpModal.style.display = "none";
+    }
+    signUpForm.reset()
   })
 }
