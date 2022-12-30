@@ -15,7 +15,6 @@ In order for you to use the content on this repo ensure you have the following:
 
 ### Installing
 
-
 - You could fork into your own account by clicking on the top right corner of this page there is a button labelled ``Fork`` or cloning the project to your local environment using 
 
 - Navigate to your terminal and run the command below
