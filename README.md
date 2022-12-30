@@ -1,9 +1,6 @@
 # EVENTLAB
 
-This is a javascript code challenge on DOM manipulation, Event handling and Communicating with the server. The application allows the user to see the first movie's details, including its **poster, title, runtime,
-   showtime, and available tickets** when the page loads and a menu of all movies on the scrollable left side of the page when the page loads. Clicking on an film's name to see its details. It should only be displaying the details of one film at a time. 
-   When viewing an film’s details, user should be able to buy a ticket for a movie. After clicking the "Buy Ticket" button,
-   see the number of available tickets decreasing on the frontend and should not be able to buy a ticket if the showing is sold out.
+This is an event search and advertising platform. The application allows the user to see a list of available events. When viewing an event details, user should be able to see all the details about the specific event. After clicking the "Get Tickets" button,they are redirected to the Ticketmaster site to be able to view the tickets.
    
 ## Getting Started
 
@@ -15,7 +12,6 @@ In order for you to use the content on this repo ensure you have the following:
 
 - A computer that runs on either of the following; (Linux, Mac OS)
 - nodejs 9.0+
-- json-server package
 
 ### Installing
 
@@ -24,21 +20,17 @@ In order for you to use the content on this repo ensure you have the following:
 
 - Navigate to your terminal and run the command below
 
-      git clone https://github.com/Ayub-Ian/WK3-Code-Challenge-Flatdango/
+      git clone https://github.com/Ayub-Ian/eventlab/
       
 - Once cloning is done, to run the application and interact with it
       
-      cd WK3-Code-Challenge-Flatdango
-      npm start
-
-- Running the ``npm start`` command should start the ``json-server`` which will enables us to fetch data from the url ``http://localhost:3000/films``
-
-
+      cd eventlab
+      
 ## Deployment
 
 ### Alternative one
 
-Website can be accessed live at [Flatdango website](https://ayub-ian.github.io/WK3-Code-Challenge-Flatdango/)
+Website can be accessed live at [Eventlab website](https://ayub-ian.github.io/eventlab/)
 
 ### Alternative two
 
@@ -52,6 +44,7 @@ Website can be accessed live at [Flatdango website](https://ayub-ian.github.io/W
 * [Vanilla Javascript]
 * [HTML]
 * [CSS]
+* [TailwindCSS]
 
 
 ## Authors
