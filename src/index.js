@@ -89,7 +89,7 @@ function eventSuggestions() {
   )
 }
 
-
+// Display a list of available events based on radius in km
 function displayEventList(event) {
   const list = document.querySelector('#service-grid')
   let item = document.createElement('div')
@@ -121,6 +121,7 @@ function displayEventList(event) {
 
 list.appendChild(item)
 
+// create button to display specified event details
 let btn = document.createElement('button')
 btn.classList.add("bg-clifford", "w-fit", "rounded-full", "absolute", "bottom-6" ,"right-16")
 btn.innerHTML = ` <svg
@@ -135,8 +136,11 @@ xmlns="http://www.w3.org/2000/svg"
   fill="black"
 />
 </svg>`
+
+// append the button to each item in the list of events
 item.appendChild(btn)
 
+// button click action which displays details of a specific event
 btn.addEventListener('click',()=> {
   const landingPage = document.querySelector("#landing-page")
   const detailPage = document.querySelector('#event-details')
@@ -173,6 +177,7 @@ let convertedDate = dateStr.toLocaleDateString(undefined,options)
 
 }
 
+// toggle functionality which displays the landing page or details page after click action
 function toggleDisplay() {
   const landingPage = document.querySelector("#landing-page")
   const detailPage = document.querySelector('#event-details')
@@ -180,13 +185,15 @@ function toggleDisplay() {
   detailPage.style.display = "none"
 }
 
+// Login form submit functionality
 function handleLogin() {
   const loginForm = document.querySelector('#login_form')
   loginForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     let name = e.target.username.value
     let password = e.target.password.value
-    console.log(password)
+
+    // Login form validation
     if (name == null || name == ""){
       alert("Name can't be blank")
       e.target.username.style.outline = "1px solid #FF6347"
@@ -204,6 +211,8 @@ function handleLogin() {
   })
 }
 
+
+// sign up form submit functionality
 function handleSignUp() {
   const signUpForm = document.querySelector('#signup_form')
   signUpForm.addEventListener('submit', (e) => {
@@ -216,7 +225,7 @@ function handleSignUp() {
 let dotposition=email.lastIndexOf(".");
 
 
-
+//sign up form validation
     if (username == null || username == ""){
       alert("Username can't be blank")
       e.target.username.style.outline = "1px solid #FF6347"
@@ -242,6 +251,7 @@ let dotposition=email.lastIndexOf(".");
   })
 }
 
+// search form submit functionality
 function handleSearch() {
   const searchForm = document.querySelector('#search_form')
   const countryCodes = {
@@ -261,13 +271,14 @@ function handleSearch() {
       }
     }
     console.log(searchValue)
-
+    // search api using parameters passed in the search input (i.e country code)
     const searchUrl = `https://app.ticketmaster.com/discovery/v2/suggest.json?countryCode=${searchValue}&apikey=CI1WE32n4l6fgGf5ErtPnGSdEZfcPZAP`
     fetch(searchUrl)
     .then(res=>res.json())
     .then(data => {
       console.log(data["_embedded"].attractions)
       data["_embedded"].attractions.forEach(element => {
+        //display search results
         showResults(element)
       });
      
@@ -278,19 +289,23 @@ function handleSearch() {
   )
 }
 
+// display tooltip on mouse enter
 function showTooltip() {
- 
  document.getElementById("tooltip3").classList.remove("hidden");
 }
+
+//hide tooltip on mouse leave
 function hideTooltip() {
- 
   document.getElementById("tooltip3").classList.add("hidden");
 }
 
+// close search list display functionality
 function closeNav() {
   document.getElementById("searchSidenav").style.width = "0";
 }
 
+
+//display results of search functionality
 function showResults(data) {
   
   let searchItem = document.createElement('div')
